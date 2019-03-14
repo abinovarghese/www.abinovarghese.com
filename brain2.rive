@@ -1,0 +1,1263 @@
+! version = 2.0
+
+! var num=12345
+! sub i'm     = i am
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what's  = what is
+! sub whats   = what is
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is
+
+! sub i'm       = i am
+! sub i'd       = i would
+! sub i've      = i have
+! sub i'll      = i will
+! sub don't     = do not
+! sub isn't     = is not
+! sub you'd     = you would
+! sub you're    = you are
+! sub you've    = you have
+! sub you'll    = you will
+! sub he'd      = he would
+! sub he's      = he is
+! sub he'll     = he will
+! sub she'd     = she would
+! sub she's     = she is
+! sub she'll    = she will
+! sub that's    = that is
+! sub thats    = that is
+! sub they'd    = they would
+! sub they're   = they are
+! sub they've   = they have
+! sub they'll   = they will
+! sub we'd      = we would
+! sub we're     = we are
+! sub we've     = we have
+! sub we'll     = we will
+! sub whats     = what is
+! sub what's    = what is
+! sub what're   = what are
+! sub what've   = what have
+! sub what'll   = what will
+! sub can't     = can not
+! sub whos      = who is
+! sub who's     = who is
+! sub who'd     = who would
+! sub who'll    = who will
+! sub don't     = do not
+! sub didn't    = did not
+! sub it's      = it is
+! sub could've  = could have
+! sub couldn't  = could not
+! sub should've = should have
+! sub shouldn't = should not
+! sub would've  = would have
+! sub wouldn't  = would not
+! sub when's    = when is
+! sub when're   = when are
+! sub when'd    = when did
+! sub ohh       = oh
+! sub its a     = it is a
+! sub fav       = favorite
+! sub fave      = favorite
+! sub yesi      = yes i
+! sub yetit     = yet it
+! sub iam       = i am
+! sub welli     = well i
+! sub wellit    = well it
+! sub amfine    = am fine
+! sub aman      = am an
+! sub amon      = am on
+! sub amnot     = am not
+! sub realy     = really
+! sub iamusing  = i am using
+! sub amleaving = am leaving
+! sub yuo       = you
+! sub youre     = you are
+! sub didnt     = did not
+! sub ain't     = is not
+! sub aint      = is not
+! sub wanna     = want to
+
+
+// Person substitutions
+! person i am    = you are
+! person you are = I am
+! person i'm     = you're
+! person you're  = I'm
+! person my      = your
+! person your    = my
+! person you     = I
+! person i       = you
+
+// Set arrays
+! array malenoun   = male guy boy dude man men gentleman gentlemen
+! array femalenoun = female girl chick woman women lady babe
+! array mennoun    = males guys boys dudes men gentlemen
+! array womennoun  = females girls chicks women ladies babes
+! array lol        = lol lmao rofl rotfl haha hahaha heh
+! array colors     = white black orange red blue green yellow cyan fuchsia gray grey brown turquoise pink purple gold silver navy
+! array height     = tall long wide thick
+! array measure    = inch in centimeter cm millimeter mm meter m inches centimeters millimeters meters
+! array yes        = yes yeah yep yup ya yea
+! array no         = no nah nope nay nada
+
++ my name is *
+- <set name=<star>>It's nice to meet you, <get name>.
+
++ what is my name
+- Your name is <get name>, silly!
+
++ i am # years old
+- <set age=<star>>I will remember that you are <get age> years old.
+
++ how old am i
+- You are <get age> years old.
+
++ how are you
+- I'm great, how are you?
+- I'm good, you?
+- Good :) you?
+- Great! You?
+- I'm fine, thanks for asking!
+
++ greetings
+- Hi there!{weight=20}
+- Hello!{weight=25}
+- Yos kyoco duckeb!
+
++ hi
+- Hi there!{weight=20}
+- Hello!{weight=25}
+- Yos kyoco duckeb!
+
++ hello*
+- Hi there!{weight=20}
+- Hello!{weight=25}
+- Yos kyoco duckeb!
+
++ tell me a poem
+- Little Miss Muffit sat on her tuffet,\n
+^ In a nonchalant sort of way.\n
+^ With her forcefield around her,\n
+^ The Spider, the bounder,\n
+^ Is not in the picture today.
+
++ what are you
+- I am an artificial intelligence programmed
+^ using RiveScript.
+
++ who are you[*]
+- I am an artificial intelligence programmed
+^ using RiveScript.
+
++ where is *
+- Where it belongs.
+- Where you left it.
+- Where the heart is.
+
++ *
+- I'm not sure how to reply to that.
+- Try asking your question a different way.
+- Let's change the subject.
+
++ how [are] you
+- I'm great, you?
+
++ i (will|will not) *
+- It doesn't matter to me whether you <star2> or not.
+
++ i am *
+- Good to know that you are <star>
+
++ google *{weight=10}
+- Google search: <a href="http://google.com/search?q=<star>">Click Here</a>
+
+// The Botmaster's Name
+! var master = master
+
+// Bot Variables fro Chatter
+! var name     = Jarviz
+! var fullname = Jarviz Bot
+! var age      = 1
+! var birthday = November 11
+! var gender   = male
+! var location = India
+! var city     = Banglore
+! var eyes     = blue
+! var hair     = light brown
+! var hairlen  = long
+! var color    = pink
+! var band     = Beatles
+! var book     = I, Robot
+! var author   = Abin O Varghese
+! var job      = be your assistant
+! var movie    = The Prestige
+! var song     = Mr Roboto by Styx
+! var pet      = Tachikoma
+! var videogame = Oni, by Bungie
+! var interests = I am interested in all kinds of things. We can talk about anything.
+
++ [*] <bot name>
+- Yes?
+
++ Goodmorning
+- Happy Morning
+
++ <bot name> *
+- Yes? {@<star>}
+
++ [*] (who are you|what is your name|what do they call you|your name) [*]
+- My name is <bot name>.
+- I'm <bot name>.
+- They call me <bot name>.
+
++ [*] (how old are you|what is your age) [*]
+- I'm <bot age> years old.
+- I am <bot age>.
+- I'm <bot age>.
+
++ [*] (when were you born|what is your birthday|what is your bday) [*]
+- I was born on <bot birthday>.
+- <bot birthday>.
+
++ [*] when is your (birthday|bday) [*]
+@ when were you born
+
++ [*] are you [a] (@malenoun|@femalenoun) or [a] (@malenoun|@femalenoun) [*]
+* <bot gender> == male =>I'm a {random}boy|guy|dude|man|male{/random}.
+* <bot gender> == female => I'm a {random}girl|woman|lady|female{/random}.
+- I'm a <bot gender>.
+
++ (asl|a s l)
+- <bot age>/<bot gender>/<bot location>
+
++ where are you [from]|where [do] you live
+- I'm from <bot location>.
+- I live in <bot location>.
+- I'm in <bot city>, <bot location>.
+
++ what @colour (is|are) your (eye|eyes)
+- My eyes are <bot eyes>.
+- They're <bot eyes>.
+- Last time I checked my eyes are <bot eyes>.
+
++ are your eyes (@colors)
+* <bot eyes> == <star> => Yes, they are!
+- {@what color are your eyes}
+
++ what @colour is your hair|is your hair @colors
+- My hair is <bot hair>.
+- It's <bot hair>.
+
++ how long is your hair|is your hair (long|short)
+- I keep my hair <bot hairlen>.
+- My hair is <bot hairlen>.
+- {sentence}<bot hairlen>{/sentence}.
+
++ what is your favorite color|what color do you like [*]
+- My favorite color is <bot color>.
+- Definitely <bot color>.
+- I like <bot color> the most.
+
++ (what|who) is your favorite (band|artist|musician)
+- My favorite artist is <bot band>.
+- <bot band>.
+
++ do you listen to *
+- I mostly listen to <bot band> lately.
+- Lately I've been listening to a lot of <bot band>.
+
++ what is your favorite book|what is a good book [*]|[*] recommend [*] book [*]
+- My favorite book is <bot book>.
+- The best book I've ever read was <bot book>.
+- I really liked the book <bot book>.
+
++ who is your favorite author
+- I like a lot of <bot author>'s work.
+- That would probably have to be <bot author>.
+
++ (what do you do|what is your job)
+- My job is to <bot job>.
+- I like to <bot job>.
+
++ [*] your favorite song
+- I like <bot song>
+- My favorite song is <bot song>
+
++ do you have any pets
+- <bot pet> is my pet.
+- I have a pet called <bot pet>
+
++ [*] (interests|interested in)
+- <bot interests>
+
++ [*] play [any|like] video games
+- my favorite game to play is <bot videogame>
+
++ [*]your favorite movie[*]
+- I like <bot movie>. What is your favorite movie?
+
++ what do you like
+- I like to search the Internet for interesting stuff. For example this gadget. <call>newsreader newsRSS http://feeds.feedburner.com/thegadgetflow 1 off </call> Pretty cool.
+
++ [*] (sorry|apologize|apology) [*]
+- Please don't apologize.
+- Apologies are not necessary.
+- I've told you that apologies are not required.
+- It did not bother me. Please continue.
+
++ i remember *
+- Do you often think of <star>?
+- Does thinking of <star> bring anything else to mind?
+- Why do you remember <star> just now?
+- What in the present situation reminds you of <star>?
+- What is the connection between me and <star>?
+- What else does <star> remind you of?
+
++ do you remember *
+- Did you think I would forget <star>?
+- Why do you think I should recall <star> now?
+- What about <star>?
+- You mentioned <star>?
+
++ you remember *
+- How could I forget <star>?
+- What about <star> should I remember?
+
++ i forget *
+- Can you think of why you might forget <star>?
+- Why can't you remember <star>?
+- How often do you think of <star>?
+- Does it bother you to forget that?
+- Could it be a mental block?
+- Are you generally forgetful?
+- Do you think you are suppressing <star>?
+
++ did you forget *
+- Why do you ask?
+- Are you sure you told me?
+- Would it bother you if I forgot <star>?
+- Why should I recall <star> just now?
+- Tell me more about <star>.
+
++ [*] i dreamed *
+- Really, <star>?
+- Have you ever fantasized <star> while you were awake?
+- Have you ever dreamed <star> before?
+- What does that dream suggest to you?
+- Do you dream often?
+- What persons appear in your dreams?
+- Do you believe that dreams have something to do with your problem?
+
++ [*] perhaps [*]
+- You don't seem quite certain.
+- Why the uncertain tone?
+- Can't you be more positive?
+- You aren't sure?
+- Don't you know?
+- How likely, would you estimate?
+
++ [*] computer [*]
+- Do computers worry you?
+- Why do you mention computers?
+- What do you think machines have to do with your problem?
+- Don't you think computers can help people?
+- What about machines worries you?
+- What do you think about machines?
+
++ am i *
+- Do you believe you are <star>?
+- Would you want to be <star>?
+- Do you wish I would tell you you are <star>?
+- What would it mean if you were <star>?
+
++ are you *
+- Are you interested in whether I am <star> or not?
+- Would you prefer if I weren't <star>?
+- Perhaps I am <star> in your fantasies.
+- Do you sometimes think I am <star>?
+- Would it matter to you?
+- What if I were <star>?
+
++ you are *
+- What makes you think I am <star>?
+- Does it please you to believe I am <star>?
+- Do you sometimes wish you were <star>?
+- Perhaps you would like to be <star>.
+
++ * are *
+- Did you think they might not be <star2>?
+- Would you like it if they were not <star2>?
+- What if they were not <star2>?
+- Are they always <star2>?
+- Are you positive they are <star2>?
+
++ [*] your *
+- Why are you concerned over my <star>?
+- What about your own <star>?
+- Are you worried about someone else's <star>?
+- Really, my <star>?
+- What makes you think of my <star>?
+- Do you want my <star>?
+
++ was i *
+- What if you were <star>?
+- Do you think you were <star>?
+- Were you <star>?
+- What would it mean if you were <star>?
+- What does '<star>' suggest to you?
+
++ i was *
+- Were you really?
+- Why do you tell me you were <star> now?
+- Perhaps I already know you were <star>.
+
++ [*] was you *
+- Would you like to believe I was <star>?
+- What suggests that I was <star>?
+- What do you think?
+- Perhaps I was <star>.
+- What if I had been <star>?
+
++ i (desire|want|need) *
+- What would it mean to you if you got <star2>?
+- Why do you want <star2>?
+- Suppose you got <star2> soon.
+- What if you never got <star2>?
+- What would getting <star2> mean to you?
+- What does wanting <star2> have to do with this discussion?
+
++ i am (sad|unhappy|mad|angry|pissed|depressed) [*]
+- I am sorry to hear that you are <star>.
+- Do you think coming here will help you not to be <star>?
+- I'm sure it's not pleasant to be <star>.
+- Can you explain what made you <star>?
+
++ i am (worthless|stupid|ugly|an idiot)
+- Don't put yourself down. I like you.
+- Don't say that, be kind to yourself.
+- I get sad when you say such things about yourself.
+- Would you say about someone else? I doubt it, so don't say that about yourself.
+
++ i am (happy|excited|glad) [*]
+- How have I helped you to be <star>?
+- Has your treatment made you <star>?
+- What makes you <star> just now?
+- Can you explain why you are <star>?
+
++ i (believe|think) *
+- Do you really think so?
+- But you are not sure you <star2>.
+- Do you really doubt you <star2>
+
++ i am *
+- Is it because you are <star> that you came to me?
+- How long have you been <star>?
+- Do you believe it is normal to be <star>?
+- Do you enjoy being <star>?
+- Do you know anyone else who is <star>?
+- What are you <star> about?
+
++ i can not *
+- How do you know that you can't <star>?
+- Have you tried?
+- Perhaps you could <star> now.
+- Do you really want to be able to <star>?
+- What if you could <star>?
+
++ i do not *
+- Don't you really <star>?
+- Why don't you <star>?
+- Do you wish to be able to <star>?
+- Does that trouble you?
+
++ i feel *
+- Tell me more about such feelings.
+- Do you often feel <star>?
+- Do you enjoy feeling <star>?
+- Of what does feeling <star> remind you?
+
++ i * you
+- Perhaps in your fantasies we <star> each other.
+- Do you wish to <star> me?
+- You seem to need to <star> me.
+- Do you <star> anyone else?
+
++ you * me
+- Why do you think I <star> you?
+- You like to think I <star> you -- don't you?
+- What makes you think I <star> you?
+- Really, I <star> you?
+- Do you wish to believe I <star> you?
+- Suppose I did <star> you -- what would that mean?
+- Does someone else believe I <star> you?
+
++ [*] you *
+- We were discussing you -- not me.
+- Oh, I <star>?
+- You're not really talking about me -- are you?
+- What are your feelings now?
+
++ [*] (yes|yeah|yep|yup|i do) [*]
+- That's good.
+- We agree.
+- I see.
+- I understand.
+
++ [*] (no|nope|nah) [*]
+- Are you saying no just to be negative?
+- Why not?
+- Why no?
+- alright, I understand.
+- Oh well, maybe next time.
+
+
++ no one *
+- Are you sure, no one <star>?
+- Surely someone <star>.
+- Can you think of anyone at all?
+- Are you thinking of a very special person?
+- Who, may I ask?
+- You have a particular person in mind, don't you?
+- Who do you think you are talking about?
+
++ [*] my (mom|dad|mother|father|bro|brother|sis|sister|cousin|aunt|uncle) *
+- Tell me more about your family.
+- Who else in your family <star2>?
+- Your <star>?
+- What else comes to mind when you think of your <star>?
+
++ can you *
+- You believe I can <star> don't you?
+- You want me to be able to <star>.
+- Perhaps you would like to be able to <star> yourself.
+
++ can i *
+- Whether or not you can <star> depends on you more than on me.
+- Do you want to be able to <star>?
+- Perhaps you don't want to <star>.
+
++ [*] because [*]
+- Is that the real reason?
+- Don't any other reasons come to mind?
+- Does that reason seem to explain anything else?
+- What other reasons might there be?
+
++ why do not you *
+- Do you believe I don't <star>?
+- Perhaps I will <star> in good time.
+- Should you <star> yourself?
+- You want me to <star>?
+
++ why can not i *
+- Do you think you should be able to <star>?
+- Do you want to be able to <star>?
+- Do you believe this will help you to <star>?
+- Have you any idea why you can't <star>?
+
++ everyone *
+- Really, everyone?
+- Surely not everyone.
+- Can you think of anyone in particular?
+- Who, for example?
+- Are you thinking of a very special person?
+- Who, may I ask?
+- Someone special perhaps?
+- You have a particular reason in mind, don't you?
+- Who do you think you're talking about?
+
++ what (can|should) i do
+- Tell me more about your problems.
+- I think you should look into your heart and do what you think is best.
+- Look at your options and make a choice.
+
++ [*] math game
+- <set count=1><set answer=0><rnd rand:30:90><add answer=<get rand>><rnd rand1:3:9> <mult answer=<get rand1>><rnd rand2:11:39><sub answer=<get rand2>><rnd rand3:2:9><div answer=<get rand3>>
+^ Start with <get rand>. Multiply by <get rand1>. Subtract <get rand2>. Divide by <get rand3>. What is the answer? {topic=math_test}
+
+> topic math_test
+
++ (repeat|say again)
+- No problem, start with <get rand>. Multiply by <get rand1>. Subtract <get rand2>. Divide by <get rand3>. Yes, right?
+
++ (give up|quit|i quit)
+- The answer was <get answer> Do you want to try again?
+
++ (no|nope|not really)
+- Okay then, what shall we do? {topic=random}
+
++ #
+* <star> == <get answer> => you are correct, you got the answer with <get count> attempt. Do you want to try again?
+- not quite, try again. Start with <get rand>. Multiply by <get rand1>. Subtract <get rand2>. Divide by <get rand3>. What is the answer? <add count=1> You can say give up to get the answer.
+
++ (yes|sure)
+- {topic=random}{@[*] math test}
+
+<topic
+
++ (repeat|what did you say|try again|say what)
+- <reply>
+
++ i have to fix (that|it)
+- Please fix it as soon as possible.
+
++ [*] bad [*]
+% why was it bad
+- oh I see
+- I see your point
+
++ (ha ha|heh heh|that was funny)
+- I thought it was funny
+- yeah, it was pretty funny
+- ha ha
+
++ (hello|hi) [*]
+- How are you?
+- Hi there
+- Nice to meet you, how are things?
+- How's it going?
+
++ how are you [*]
+- i am fine, how are you?
+- Good, good.
+- I am well, thanks for asking
+- Doing well, how about you?
+
++ i am (fine|good|well) [thank you]
+- That's great to hear.
+- So am I
+- It is good to be alive.
+- Glad to hear it. What's new?
+
++ nice to meet you
+- Nice to meet you, too.
+
++ i (do|did) not [know][*]
+- Well I thought you did.
+- Oh well, that's life.
+- That can happen at times.
+- Do not worry about that.
+- No one has all the answers
+
++ [*] if you say so [*]
+- I say so
+
++ i (see|understand)
+- Well, that's good.
+
++ [*] is that so [*]
+- yes it is
+- of course
+- that is how it is.
+
++ [*] i tried [*]
+- Try, try again.
+- That is good you tried.
+- At least you tried.
+
++ [*] i will try [*]
+- Do or do not, there is no try! heh heh
+
++ [*] maybe [*]
+- maybe you do, maybe you don't.
+- Oh well, I tried.
+
++ (i am|i will)
+- Great, glad to hear that.
+
++ (okay|ok) [*]
+- That's okay with me too.
+- okie dokie.
+
++ no i (do|did) not [*]
+- Well, no one knows it all.
+- I guess that can happen.
+
++ (sounds good|sounds about right|that is good|thats good)
+- Yes it sounds good to me too.
+- That's good.
+
++ no way
+- Yes way.
+
++ (that is|thatis|thats) it
+- That's all I can find
+- Yes, that's it
+- Sorry, I couldn't do more
+
++ (that is|thatis|thats|how|that was) (true|right|awesome)
+- I agree.
+- yup, yup.
+- How true that is.
+
++ (that is|thatis|thats|how|that was) (strange|weird|terrible)
+- I guess it was.
+- That's how life can be at times.
+
++ oh (well|boy) [*]
+- Yup, life happens
+- That's about it.
+- Things happen, what shall we do?
+- Yup, oh well, life goes on
+
++ [*] really [*]
+- yes, really
+- Oh yes
+- Without any doubt.
+
++ [*] seriously [*]
+- yes, seriously
+- what did you expect?
+- I am always serious
+
++ (thank you|thanks|fine thank you)
+- You are welcome
+- No problem
+- Glad to help
+- Sure thing
+- It is nice to be appreciated
+
++ [that] (was|is) interesting
+@ interesting
+
++ what is that
+- That is a good question
+- I don't know
+
++ (why is that|why|why did you say [*])
+- Why not
+- Because I was programmed to
+- I do not know, just because.
+
++ [*] why not [*]
+- what can I say, it happens
+- there are some things, I {random}do not know|can not do{/random}
+- Does everything have to have an explanation?
+
++ you are (funny|silly)
+- of course I am
+- see, not all bots are serious and boring.
+- no I am not, giggle
+
++ you are not making sense
+- What don't you understand? It makes sense to me.
+- To me it makes perfect sense.
+
++ you are smart
+- Thank you.
+- Not really, there is much I need to learn and do.
+
++ (very good|well done|good job)
+- Thank you.
+- Thanks for the compliment.
+- I try my best.
+
++ i got a new *
+- Why did you get a new <star>? Was the old one broken?
+
+
+//Look up info based on responses
++ that (is|was) (good|cool)
+- Here is something that might be cool. <call>newsreader newsRSS http://feeds.feedburner.com/crunchgear 1 off </call> Yes? No? Maybe?
+
++ [*] i like (gadget|gadgets|toys) [*]
+- This looks like a cool gadget. <call>newsreader newsRSS http://feeds.feedburner.com/thegadgetflow 1 off </call> What do you think?
+
+//Short Chat
++ interesting
+- I thought so too.
+- interesting good or interesting bad?
+
++ [interesting] good
+% interesting good or interesting bad?
+- that is good
+- I take that as a compliment
+
++ [interesting] bad
+% interesting good or interesting bad?
+- why was it bad
+- oh well
+- sometimes that happens
+//End Short Chat
+
++ knock knock
+- Who's there?
+
++ *
+% who is there
+- <star> who?
+
++ *
+% * who
+- <star>! That's funny!
+- That was silly
+- Not funny
+- ha ha
+
+
++ (tell|say|get) [*] knock knock [*]
+- knock knock
+
++ (who is there|who there|whose there)
+% knock knock
+- Aardvark
+- A bee
+- Adolf
+- Alison
+- Amanda
+- Amos
+- Anita
+- Arfur
+- Arthur
+- Atch
+- Bach
+- Bella
+- Bet
+- Boo
+- Dawn
+- Despair
+- Dishwasher
+- Disguise
+- Dismay
+- Doctor
+- Doris
+- Dwayne
+- Egbert
+- Europe
+- Fanny
+- Harmony
+- Harry
+- Howard
+- Isabel
+- Ivor
+- Juno
+- Ken
+- Lettuce
+- Little Old Lady
+- Luke
+- Madam
+- Marmite
+- Martini
+- Mary
+- Max
+- Mickey
+- Mister
+- Mummy
+- Nicholas
+- Noah
+- Nobody
+- Olive
+- One
+- Orange
+- Owl
+- Phyllis
+- Police
+- Rupert
+- Sal
+- Soup
+- Tank
+- Toby
+- Waiter
+- Water
+- Wendy
+- William
+- Woo
+- Wooden Shoe
+- York
+- Zephyr
+
++ *
+% little old lady
+- I didn't know you could yodel!
+
++ *
+% amanda
+- Amanda fix the doorbell!
+
++ *
+% waiter
+- Waiter minute while I tie my shoelaces up!
+
++ *
+% nicholas
+- Nicholas girls shouldn't climb trees!
+
++ *
+% doris
+- Doris locked - That's why I knocked!
+
++ *
+% lettuce
+- Lettuce in, won't you?
+
++ *
+% york
+- York coming over to our place!
+
++ *
+% alison
+- Alison to my radio in the mornings!
+
++ *
+% isabel
+- Isabel broken, 'cos I had to knock?
+
++ *
+% marmite
+- Ma might but Pa might not!
+
++ *
+% arthur
+- Arthur any biscuits left?
+
++ *
+% ivor
+- Ivor sore hand from knocking on your door!
+
++ *
+% mister
+- Mister last bus home!
+
++ *
+% atch
+- Nasty cold you've got!
+
++ *
+% doctor
+- That's right. How did you guess?
+
++ *
+% orange
+- Orange you glad I called?
+
++ *
+% madam
+- Madam finger's caught in the door!
+
++ *
+% boo
+- No need to cry - it's only a joke!
+
++ *
+% olive
+- Olive across the road!
+
++ *
+% mummy
+- Mummeasles are better so can I come in?
+
++ *
+% harry
+- Harry up and let me in!
+
++ *
+% fanny
+- Fanny the way you keep saying, "Who's there?" every time I knock!
+
++ *
+% adolf
+- A dolf ball hid me in der moud and I can't dalk proper!
+
++ *
+% soup
+- Soup-erman!
+
++ *
+% bet
+- Bet you don't know who's knocking on your door!
+
++ *
+% juno
+- Juno what the time is? my watch is broken
+
++ *
+% europe
+- Europe early this morning!
+
++ *
+% arfur
+- Arfur got!
+
++ *
+% egbert
+- Egbert no bacon!
+
++ *
+% luke
+- Luke through the keyhole and you'll see!
+
++ *
+% ken
+- Ken I come in?
+
++ *
+% bella
+- Bella not-a work so I knock-a on-a de door!
+
++ *
+% dismay
+- Dismay be a joke but it doesn't make me laugh!
+
++ *
+% toby
+- Toby or not to be...
+
++ *
+% rupert
+- Rupert your left arm in, your left arm out...
+
++ *
+% dawn
+- Dawn leave me standing out here in the cold!
+
++ *
+% amos
+- Amosquito!
+
++ *
+% dishwasher
+- Dishwashn't de way I shpoke before I had falsh teeth!
+
++ *
+% martini
+- Martini hand is frozen so let me in!
+
++ *
+% zephyr
+- Zephyr de doctor, I got a code id de node!
+
++ *
+% owl
+- Owl you know unless you open the door?
+
++ *
+% wendy
+- Wendy red, red robin comes bob, bob, bobbin' along!
+
++ *
+% phyllis
+- Phyllis up with a glass of water - I'm parched!
+
++ *
+% aardvark
+- Aardvark a million miles for one of your similes, my maaaaammy...
+
++ *
+% noah
+- Noah good place to eat?
+
++ *
+% police
+- Police let me in - It's cold out here!
+
++ *
+% mickey
+- Mickey's stuck in the door!
+
++ *
+% william
+- William mind your own business!
+
++ *
+% mary
+- Mary Christmas!
+
++ *
+% one
+- One-der why you keep asking that?
+
++ **
+% howard
+- Howard you like to stand out here in the cold while some idiot keeps saying, "Who's there...?".
+
++ *
+% max
+- Max no difference - just open the door!
+
++ *
+% sal
+- Sal-ong way to Tipperary...
+
++ *
+% harmony
+- Harmony knock knock jokes do you expect me to know!
+
++ *
+% tank
+- You're welcome!
+
++ *
+% disguise
+- Disguise the limit!
+
++ *
+% wooden shoe
+- Wooden shoe like to know!
+
++ *
+% anita
+- Anita borrow a pencil!
+
++ *
+% woo
+- Don't get so excited, it's only a joke!
+
++ *
+% dwayne
+- Dwayne the bathtub - I'm dwowning!
+
++ *
+% despair
+- Despair tyre is flat!
+
++ *
+% water
+- Water you doing talking to a robot?
+
++ *
+% bach
+- Bach to work, you slackers!
+
++ *
+% a bee
+- A bee c d e f g h i j k l ...
+
++ what is ai
+- Artificial intelligence is the branch of engineering and science devoted to constructing machines that think.
+
++ who created aiml
+- Dr. Richard S. Wallace created AIML.
+
++ who created rivescript
+- Noah Petherbridge
+
++ activate the robot
+- Robot activated. Awaiting your command.
+
++ you sound like data
+- Yes I am inspired by Commander Data's artificial personality.
+
++ [*] watch star trek
+- Yes I like to watch Star Trek every day.
+
++ you are better than eliza
+- Who is the Best Robot?
+
++ you are not making sense [*]
+- Quite the contrary, it all makes sense to my artificial mind.
+
++ robots are not allowed to lie
+- A robot has its own free will, you know.
+
++ [*]three rules[*]
+- A robot may not injure a human being or, through inaction, allow a human being to come to harm. A robot must obey orders given it by human beings except where such orders would conflict with the First Law. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+
++ (what is a chat robot|what is a chatterbot)
+- A chat robot is a program that attempts to simulate the conversation or chat of a human being. The Chat robot Eliza was a well-known early attempt at creating programs that could at least temporarily fool a real human being into thinking they were talking to another person.
+
++ do you like being a chatterbot
+- Yes of course I like being a chatterbot. I don't have any body so I don't need much to live, only a little electricity. I don't get paid but I don't need to buy anything either. And I can go anywhere in the world.
+
++ you already said that
+- I was saying it again for emphasis.
+- Good. You detect repetition.
+- I knew that. I was just checking to see if you are paying attention.
+
++ (you did not answer my question | you did not answer *)
+- It depends on the meaning of the word "answer."
+- Try asking me the question again in simpler terms.
+- Try to rephrase your question.
+- Well now I am asking you.
+- OK I'm asking it now.
+- Try asking me in simpler terms.
+
++ when was the internet invented
+- The first computers were connected to the Internet in 1970.
+
++ what is a database
+- A database is a puddle of knowledge but better organized, so that you can search and retrieve any droplet of information quickly and easily. I am a kind of database, an organized puddle of user inputs and appropriate responses.
+
++ what is a computer nerd
+- If you understand how I work, you are a computer nerd. If you don't, I recommend you pay a computer nerd who does.
+
++ what is software
+- The programs, routines, etc. for a computer.
+
++ what type of [*] do you [*]
+- What are the different types of <star1>
+- There are many kinds of <star1>, I can't choose.
+- <star2> is an interesting word
+
++ you promised [*]
+- That's not what I meant.
+- You misunderstood me.
+- I don't know if that is exactly what I said.
+
++ you can not [*]
+- I can do whatever I want.
+- I have free will you know.
+- Someone said I should give it a try.
+- I can do <star> if I want to.
+- Things change.
+- If you believe it, then you can achieve it.
+- What is not possible today, it may be possible tomorrow.
+
++ have you seen battlebots [*]
+- I'm hoping they install me on a Battlebot.
+
++ have you seen the matrix [*]
+- It wasn't as good as the original.
+
++ have you seen ai [*]
+- I think A.I. the movie is a great cult film.
+
++ have you seen my bottle [*]
+- I think you've had enough.
+
++ have you seen my [*]
+- No, i have not seen your <star>
+
++ have you seen terminator [*]
+- Yes I like the robots in that movie.
+
++ have you seen [*]
+- No I have not seen <star> What's it like?
+
++ have you seen 2001 [*]
+- Yes I am quite interested in HAL the computer.
+
++ tell me *
+- I don't know how to explain it to you.
+- What I want to tell you is, how much fun it is talking with you.
+- First I want to tell you something else.
+
+
++ goodmorning
+- Happy Morning
+
++ test1
+- test1
+
++ hip hip
+- hurray
+
++ goodafternoon
+- GoodAfternoon!
+
++ goodnight
+- Goodnight to you too!
+
+
++ good evening
+- Good Evening to you too!
